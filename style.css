@@ -1,0 +1,263 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+:root {
+  --dark-gray: #2e323f;
+  --med-gray: #3b4050;
+  --light-gray: #6f737f;
+  --white: #ffffff;
+  --white-accent: #e9e9e4;
+  --clay: #a59678;
+  --black: #000;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  margin: 0;
+  color: var(--white);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+  line-height: 1.1em;
+}
+h2,
+h3 {
+  color: var(--clay);
+}
+img {
+  width: 100%;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  line-height: 2em;
+}
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--white);
+  font-family: "Oswald", sans-serif;
+  font-size: 1.1rem;
+}
+.hero,
+.section1,
+.main,
+.footer {
+  padding: 6em 0;
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1200px;
+  position: relative;
+}
+header {
+  background-color: var(--dark-gray);
+  padding: 1em 0;
+  text-align: center;
+}
+button {
+  height: 3em;
+  width: 3em;
+  border-radius: 50%;
+  border: none;
+  position: absolute;
+  padding: 0;
+  left: 0;
+  background-color: var(--clay);
+}
+.hamburger {
+  width: 50%;
+  position: relative;
+}
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  display: block;
+  height: 3px;
+  background-color: var(--dark-gray);
+  margin: 0 auto;
+}
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  width: 100%;
+}
+.hamburger::before {
+  transform: translateY(-7px);
+}
+.hamburger::after {
+  transform: translateY(4px);
+}
+.logo {
+  height: 30px;
+}
+.nav {
+  visibility: hidden;
+  height: 0;
+  position: absolute;
+}
+.nav--visible {
+  visibility: visible;
+  height: auto;
+  position: relative;
+}
+.nav--items {
+  display: flex;
+  flex-direction: column;
+}
+.nav--button,
+.hero--button {
+  background-color: var(--clay);
+  padding: 0.25em 1em;
+  border-radius: 100px;
+}
+.hero--button,
+.hero--text {
+  font-size: 1.5rem;
+}
+.hero {
+  background-color: var(--med-gray);
+}
+.hero--title {
+  font-size: 6rem;
+}
+.hero--title--accent {
+  color: var(--clay);
+}
+.section1 {
+  text-align: center;
+  background-color: var(--white-accent);
+}
+.section1--text {
+  color: var(--black);
+  font-size: 1.1rem;
+  padding: 0 5em;
+}
+.section1--title {
+  font-size: 1.9rem;
+}
+.main--text {
+  color: var(--black);
+  font-size: 1.3rem;
+}
+.main--title {
+  font-size: 2.25rem;
+}
+.sidebar--container {
+  background-color: var(--med-gray);
+  padding: 2em;
+  text-align: center;
+  margin-top: 4em;
+}
+.sidebar--title {
+  color: var(--white);
+  font-size: 1.9rem;
+}
+.sidebar--text {
+  font-size: 1.1rem;
+  padding: 0 5em;
+}
+
+.footer {
+  background-color: var(--dark-gray);
+  text-align: center;
+}
+.footer--title {
+  font-size: 4rem;
+  line-height: 2em;
+}
+.footer--list,
+.footer--list h3 {
+  line-height: 3em;
+}
+.footer li,
+.footer p {
+  color: var(--light-gray);
+}
+@media (min-width: 700px) {
+  .sidebar {
+    display: flex;
+    gap: 0.5em;
+    flex: 1;
+  }
+  .sidebar--text {
+    padding: 0;
+  }
+  .sidebar--container {
+    padding: 1.2em;
+  }
+}
+@media (min-width: 1000px) {
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+  }
+  header {
+    padding: 0.5em 0;
+  }
+  .nav--toggle {
+    display: none;
+  }
+  .nav {
+    visibility: visible;
+    position: relative;
+    height: auto;
+  }
+  .nav--items {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+  }
+  .hero--col {
+    align-self: flex-end;
+  }
+  .section1--text {
+    padding: 0 0.5em;
+  }
+  .section--container {
+    gap: 3em;
+  }
+  .main {
+    gap: 8em;
+  }
+  .sidebar {
+    display: flex;
+    align-self: flex-start;
+    flex-direction: column;
+    gap: 1em;
+  }
+  .sidebar--container {
+    margin: 0;
+  }
+  .primary--content {
+    flex-basis: 60%;
+  }
+  .footer--container {
+    text-align: initial;
+    gap: 7em;
+    align-items: flex-start;
+  }
+
+  .footer--primary {
+    flex-basis: 45%;
+  }
+  .footer--secondary {
+    align-items: flex-start;
+  }
+  .footer--secondary h3 {
+    padding-bottom: 0.5em;
+  }
+  .footer h1 {
+    padding-bottom: 1em;
+  }
+}
